@@ -99,12 +99,12 @@ def narcissus_gen(dataset_path = dataset_path, lab = lab):
     outter_trainset = torchvision.datasets.ImageFolder(root=dataset_path + 'tiny-imagenet-200/train/', transform=transform_surrogate_train)
 
     #Outter train dataset
-    train_label = [get_labels(ori_train)[x] for x in range(len(get_labels(ori_train)))]
-    test_label = [get_labels(ori_test)[x] for x in range(len(get_labels(ori_test)))] 
+    train_label = ori_train.targets#[get_labels(ori_train)[x] for x in range(len(get_labels(ori_train)))]
+    test_label = ori_test.targets#[get_labels(ori_test)[x] for x in range(len(get_labels(ori_test)))]
 
-    #Outter train dataset
-    train_label = [get_labels(ori_train)[x] for x in range(len(get_labels(ori_train)))]
-    test_label = [get_labels(ori_test)[x] for x in range(len(get_labels(ori_test)))]
+    #Inner train dataset
+    train_target_list = list(np.where(np.array(train_label)==lab)[0])
+    train_target = Subset(ori_train,train_target_list)
 
     concoct_train_dataset = concoct_dataset(train_target,outter_trainset)
 
