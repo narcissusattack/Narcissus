@@ -12,7 +12,7 @@
 
 <img align="right" width="350px" style="margin-left: 25px; margin-top: 8px" src="https://user-images.githubusercontent.com/64983135/162965476-8ae89a8a-604f-465c-a50a-fef294422f28.gif">
 
-<p align="justify">Narcissus backdoor attack is highly effective across datasets and models, even when the trigger is injected into the physical world (see the gif demo or the <a href="https://drive.google.com/file/d/1e9iL99hOi3D6UmfjEUjv0lnFAtyrzIWw/view">full video demon</a>). Most surprisingly, our attack can evade the latest state-of-the-art defenses in their vanilla form, or after a simple twist, we can adapt to the downstream defenses. We study the cause of the intriguing effectiveness and find that because the trigger synthesized by our attack contains features as persistent as the original semantic features of the target class, any attempt to remove such triggers would inevitably hurt the model accuracy first.</p>
+<p>Narcissus backdoor attack is highly effective across datasets and models, even when the trigger is injected into the physical world (see the gif demo or the <a href="https://drive.google.com/file/d/1e9iL99hOi3D6UmfjEUjv0lnFAtyrzIWw/view">full video demon</a>). Most surprisingly, our attack can evade the latest state-of-the-art defenses in their vanilla form, or after a simple twist, we can adapt to the downstream defenses. We study the cause of the intriguing effectiveness and find that because the trigger synthesized by our attack contains features as persistent as the original semantic features of the target class, any attempt to remove such triggers would inevitably hurt the model accuracy first.</p>
 
 # Features
 - Clean label backdoor attack
